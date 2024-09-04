@@ -28,22 +28,11 @@
         text-decoration: none;
       }
     </style>
-    <script type="module" crossorigin src="assets/index-DgQ9PxtK.js"></script>
-    <link rel="stylesheet" crossorigin href="assets/index-MOWxslsL.css">
-  <link rel="manifest" href="manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="registerSW.js"></script></head>
+    <script type="module" crossorigin src="/assets/index-DgQ9PxtK.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-MOWxslsL.css">
+  <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
   <body>
     <div id="root"></div>
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/STJDA_Intake/sw.js', { scope: '/STJDA_Intake/' })
-            .then(function(registration) {
-              console.log('PWA service worker ready..');
-            }, function(err) {
-              console.log('PWA service worker registration failed: ', err);
-            });
-        });
-      }
-    </script>
+    <script src="./public/registerSW.js"></script>
   </body>
 </html>
