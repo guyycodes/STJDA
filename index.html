@@ -29,10 +29,22 @@
       }
     </style>
     <script src="//code.tidio.co/rga2rrmkxpfaskftz7s8povuz2ppveie.js" async></script>
-    <script type="module" crossorigin src="/assets/index-D9C9VuEK.js"></script>
+    <script type="module" crossorigin src="/assets/index-DgQ9PxtK.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-MOWxslsL.css">
   <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
   <body>
     <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/STJDA/sw.js', { scope: '/STJDA/' })
+            .then(function(registration) {
+              console.log('PWA service worker ready');
+            }, function(err) {
+              console.log('PWA service worker registration failed: ', err);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
